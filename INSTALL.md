@@ -16,12 +16,12 @@ consumer-producer-api
 --
 Clone the Repository, change directory to the cloned repository and then:
 ```
-git reset --hard 35bb5ad
+`$ git reset --hard 35bb5ad
 ```
 
 Build instructions
 ==
-<pre>
+```
 $ ./waf configure
 $ ./waf
-</pre>
+```
