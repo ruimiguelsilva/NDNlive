@@ -6,7 +6,7 @@ Prerequisites
 These are prerequisites to build NDNlive.
 
 **Required:**
-* [boost](http://www.boost.org/)
+* [ndn-cxx version 0.4.1](https://github.com/named-data/ndn-cxx/tree/ndn-cxx-0.4.1)
 * [consumer-producer-api](https://github.com/iliamo/Consumer-Producer-API)
 * [NFD](https://github.com/named-data/NFD.git)
 * [gstreamer-1.0](http://gstreamer.freedesktop.org/data/pkg/osx/1.4.3/)
@@ -14,12 +14,6 @@ These are prerequisites to build NDNlive.
 Prerequisites build instructions
 ==
 
-Mac OS build considerations
--
-
-boost
---
-sudo port install boost
 
 consumer-producer-api
 --
