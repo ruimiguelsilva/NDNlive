@@ -151,11 +151,21 @@ namespace ndn {
     gst_init (NULL, NULL); 
     /* Create gstreamer elements */ 
     pipeline = gst_pipeline_new ("capture-player"); 
+    if (!pipeline) {
+        g_printerr ("Could not set pipeline. Exiting.\n");
+    }
 
     videorate = gst_element_factory_make("videorate", "videorate");
 
-    source.video = gst_element_factory_make ("avfvideosrc", "camera-source"); 
-    source.audio = gst_element_factory_make ("osxaudiosrc", "MIC-source"); 
+    source.video = gst_element_factory_make ("v4l2src", "camera-source"); 
+    source.audio = gst_element_factory_make ("alsasrc", "MIC-source");
+
+    if (!source.video) {
+        g_printerr ("Could not set video. Exiting.\n");
+    }
+    if (!source.audio) {
+        g_printerr ("Could not set audio. Exiting.\n");
+    }
 
     convert = gst_element_factory_make ("audioconvert", "audio-convert"); 
 

@@ -6,7 +6,7 @@
  */
 
 #include "consumer.hpp"
-#include <ndn-cxx/contexts/face-helper.hpp>
+#include <Consumer-Producer-API/face-helper.hpp>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/ini_parser.hpp>
 #include <thread>
